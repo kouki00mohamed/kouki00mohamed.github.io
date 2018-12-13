@@ -1,0 +1,36 @@
+name: kouki Mohamed
+output_dir: '.'
+navbar:
+  title: Kouki mohamed
+  type: inverse
+  left:
+  - text: About
+    icon: fa-user
+    href: about.html
+  - text: "CV"
+    href: mycv.html
+  - text: 'My work'
+    menu:
+    
+    
+    - text: My Package
+      icon: fa-archive
+      desc: Analysis of massive SNP arrays.
+      href: mypack.html
+    
+    - text: my application
+      icon: fa-graduation-cap
+      href: app.html
+  right:
+  - icon: fa-envelope-o
+    href: mailto:kouki007mohamed@gmail.com
+  - icon: fa-github
+    href: https://github.com/kouki00mohamed
+ 
+output:
+  html_document:
+    theme: readable
+    highlight: textmate
+    lib_dir: site_libs
+    self_contained: no
+

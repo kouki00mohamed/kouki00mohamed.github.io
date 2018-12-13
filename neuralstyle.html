@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+<meta name="author" content="kouki" />
+
+
+<title>neuralstyle</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/readable.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.0.13/css/fa-svg-with-js.css" rel="stylesheet" />
+<script src="site_libs/font-awesome-5.0.13/js/fontawesome-all.min.js"></script>
+<script src="site_libs/font-awesome-5.0.13/js/fa-v4-shims.min.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 66px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+
+.section h2 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+.section h3 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+.section h4 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+.section h5 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+.section h6 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-inverse  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Kouki mohamed</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="about.html">
+    <span class="fa fa-user"></span>
+     
+    About
+  </a>
+</li>
+<li>
+  <a href="mycv.html">CV</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    My work
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="mypack.html">
+        <span class="fa fa-archive"></span>
+         
+        My Package
+      </a>
+    </li>
+    <li>
+      <a href="app.html">
+        <span class="fa fa-graduation-cap"></span>
+         
+        my application
+      </a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="mailto:kouki007mohamed@gmail.com">
+    <span class="fa fa-envelope-o"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://github.com/kouki00mohamed">
+    <span class="fa fa-github"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">neuralstyle</h1>
+<h4 class="author"><em>kouki</em></h4>
+<h4 class="date"><em>12 décembre 2018</em></h4>
+
+</div>
+
+
+<p>‘Neural style transfer with Keras.’ ‘It is preferable to run this script on a GPU, for speed.’ ‘Example result: <a href="https://twitter.com/fchollet/status/686631033085677568" class="uri">https://twitter.com/fchollet/status/686631033085677568</a>’ ‘Style transfer consists in generating an image’ with the same “content” as a base image, but with the ‘“style” of a different picture (typically artistic).’ ‘This is achieved through the optimization of a loss function’ that has 3 components: “style loss”, “content loss”, ‘and “total variation loss”:’ ‘- The total variation loss imposes local spatial continuity between’ the pixels of the combination image, giving it visual coherence. ‘’ - The style loss is where the deep learning keeps in –that one is defined ‘using a deep convolutional neural network. Precisely, it consists in a sum of’ L2 distances between the Gram matrices of the representations of ‘the base image and the style reference image, extracted from’ different layers of a convnet (trained on ImageNet). The general idea ‘is to capture color/texture information at different spatial’ scales (fairly large scales –defined by the depth of the layer considered). ‘’ - The content loss is a L2 distance between the features of the base ‘image (extracted from a deep layer) and the features of the combination image,’ keeping the generated image close enough to the original one. ’ library(keras) library(purrr) library(R6)</p>
+<p>Parameters ————————————————————–</p>
+<p>base_image_path &lt;- “neural-style-base-img.png” style_reference_image_path &lt;- “neural-style-style.jpg” iterations &lt;- 10</p>
+<p>these are the weights of the different loss components total_variation_weight &lt;- 1 style_weight &lt;- 1 content_weight &lt;- 0.025</p>
+<p>dimensions of the generated picture. img &lt;- image_load(base_image_path) width &lt;- img<span class="math inline">\(size[[1]] height &lt;- img\)</span>size[[2]] img_nrows &lt;- 400 img_ncols &lt;- as.integer(width * img_nrows / height)</p>
+<p>Functions —————————————————————</p>
+<p>util function to open, resize and format pictures into appropriate tensors preprocess_image &lt;- function(path){ img &lt;- image_load(path, target_size = c(img_nrows, img_ncols)) %&gt;% image_to_array() %&gt;% array_reshape(c(1, dim(.))) imagenet_preprocess_input(img) }</p>
+<p>util function to convert a tensor into a valid image also turn BGR into RGB. deprocess_image &lt;- function(x){ x &lt;- x[1,,,] Remove zero-center by mean pixel x[,,1] &lt;- x[,,1] + 103.939 x[,,2] &lt;- x[,,2] + 116.779 x[,,3] &lt;- x[,,3] + 123.68 BGR -&gt; RGB x &lt;- x[,,c(3,2,1)] clip to interval 0, 255 x[x &gt; 255] &lt;- 255 x[x &lt; 0] &lt;- 0 x[] &lt;- as.integer(x)/255 x }</p>
+<p>Defining the model ——————————————————</p>
+<p>get tensor representations of our images base_image &lt;- k_variable(preprocess_image(base_image_path)) style_reference_image &lt;- k_variable(preprocess_image(style_reference_image_path))</p>
+<p>this will contain our generated image combination_image &lt;- k_placeholder(c(1, img_nrows, img_ncols, 3))</p>
+<p>combine the 3 images into a single Keras tensor input_tensor &lt;- k_concatenate(list(base_image, style_reference_image, combination_image), axis = 1)</p>
+<p>build the VGG16 network with our 3 images as input the model will be loaded with pre-trained ImageNet weights model &lt;- application_vgg16(input_tensor = input_tensor, weights = “imagenet”, include_top = FALSE)</p>
+<p>print(“Model loaded.”)</p>
+<p>nms &lt;- map_chr(model<span class="math inline">\(layers, ~.x\)</span>name) output_dict &lt;- map(model<span class="math inline">\(layers, ~.x\)</span>output) %&gt;% set_names(nms)</p>
+<p>compute the neural style loss first we need to define 4 util functions</p>
+<p>the gram matrix of an image tensor (feature-wise outer product)</p>
+<p>gram_matrix &lt;- function(x){</p>
+<p>features &lt;- x %&gt;% k_permute_dimensions(pattern = c(3, 1, 2)) %&gt;% k_batch_flatten()</p>
+<p>k_dot(features, k_transpose(features)) }</p>
+<p>the “style loss” is designed to maintain the style of the reference image in the generated image. It is based on the gram matrices (which capture style) of feature maps from the style reference image and from the generated image</p>
+<p>style_loss &lt;- function(style, combination){ S &lt;- gram_matrix(style) C &lt;- gram_matrix(combination)</p>
+<p>channels &lt;- 3 size &lt;- img_nrows*img_ncols</p>
+<p>k_sum(k_square(S - C)) / (4 * channels^2 * size^2) }</p>
+<p>an auxiliary loss function designed to maintain the “content” of the base image in the generated image</p>
+<p>content_loss &lt;- function(base, combination){ k_sum(k_square(combination - base)) }</p>
+<p>the 3rd loss function, total variation loss, designed to keep the generated image locally coherent</p>
+<p>total_variation_loss &lt;- function(x){ y_ij &lt;- x[,1:(img_nrows - 1L), 1:(img_ncols - 1L),] y_i1j &lt;- x[,2:(img_nrows), 1:(img_ncols - 1L),] y_ij1 &lt;- x[,1:(img_nrows - 1L), 2:(img_ncols),]</p>
+<p>a &lt;- k_square(y_ij - y_i1j) b &lt;- k_square(y_ij - y_ij1) k_sum(k_pow(a + b, 1.25)) }</p>
+<p>combine these loss functions into a single scalar loss &lt;- k_variable(0.0) layer_features &lt;- output_dict$block4_conv2 base_image_features &lt;- layer_features[1,,,] combination_features &lt;- layer_features[3,,,]</p>
+<p>loss &lt;- loss + content_weight*content_loss(base_image_features, combination_features)</p>
+<p>feature_layers = c(‘block1_conv1’, ‘block2_conv1’, ‘block3_conv1’, ‘block4_conv1’, ‘block5_conv1’)</p>
+<p>for(layer_name in feature_layers){ layer_features &lt;- output_dict[[layer_name]] style_reference_features &lt;- layer_features[2,,,] combination_features &lt;- layer_features[3,,,] sl &lt;- style_loss(style_reference_features, combination_features) loss &lt;- loss + ((style_weight / length(feature_layers)) * sl) }</p>
+<p>loss &lt;- loss + (total_variation_weight * total_variation_loss(combination_image))</p>
+<p>get the gradients of the generated image wrt the loss grads &lt;- k_gradients(loss, combination_image)[[1]]</p>
+<p>f_outputs &lt;- k_function(list(combination_image), list(loss, grads))</p>
+<p>eval_loss_and_grads &lt;- function(image){ image &lt;- array_reshape(image, c(1, img_nrows, img_ncols, 3)) outs &lt;- f_outputs(list(image)) list( loss_value = outs[[1]], grad_values = array_reshape(outs[[2]], dim = length(outs[[2]])) ) }</p>
+<p>Loss and gradients evaluator.</p>
+<p>This Evaluator class makes it possible to compute loss and gradients in one pass while retrieving them via two separate functions, “loss” and “grads”. This is done because scipy.optimize requires separate functions for loss and gradients, but computing them separately would be inefficient. Evaluator &lt;- R6Class( “Evaluator”, public = list(</p>
+<pre><code>loss_value = NULL,
+grad_values = NULL,
+
+initialize = function() {
+  self$loss_value &lt;- NULL
+  self$grad_values &lt;- NULL
+},
+
+loss = function(x){
+  loss_and_grad &lt;- eval_loss_and_grads(x)
+  self$loss_value &lt;- loss_and_grad$loss_value
+  self$grad_values &lt;- loss_and_grad$grad_values
+  self$loss_value
+},
+
+grads = function(x){
+  grad_values &lt;- self$grad_values
+  self$loss_value &lt;- NULL
+  self$grad_values &lt;- NULL
+  grad_values
+}</code></pre>
+<p>) )</p>
+<p>evaluator &lt;- Evaluator$new()</p>
+<p>run scipy-based optimization (L-BFGS) over the pixels of the generated image so as to minimize the neural style loss dms &lt;- c(1, img_nrows, img_ncols, 3) x &lt;- array(data = runif(prod(dms), min = 0, max = 255) - 128, dim = dms)</p>
+<p>Run optimization (L-BFGS) over the pixels of the generated image so as to minimize the loss for(i in 1:iterations){</p>
+<p>Run L-BFGS opt &lt;- optim( array_reshape(x, dim = length(x)), fn = evaluator<span class="math inline">\(loss, gr = evaluator\)</span>grads, method = “L-BFGS-B”, control = list(maxit = 15) )</p>
+<p>Print loss value print(opt$value)</p>
+<p>decode the image image &lt;- x &lt;- opt$par image &lt;- array_reshape(image, dms)</p>
+<p>plot im &lt;- deprocess_image(image) plot(as.raster(im)) }</p>
+<p>R Markdown</p>
+<p>This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a>.</p>
+<p>When you click the <strong>Knit</strong> button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:</p>
+<pre class="r"><code>summary(cars)</code></pre>
+<pre><code>##      speed           dist       
+##  Min.   : 4.0   Min.   :  2.00  
+##  1st Qu.:12.0   1st Qu.: 26.00  
+##  Median :15.0   Median : 36.00  
+##  Mean   :15.4   Mean   : 42.98  
+##  3rd Qu.:19.0   3rd Qu.: 56.00  
+##  Max.   :25.0   Max.   :120.00</code></pre>
+<p>Including Plots</p>
+<p>You can also embed plots, for example:</p>
+<p><img src="neuralstyle_files/figure-html/pressure-1.png" width="672" /></p>
+<p>Note that the <code>echo = FALSE</code> parameter was added to the code chunk to prevent printing of the R code that generated the plot.</p>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

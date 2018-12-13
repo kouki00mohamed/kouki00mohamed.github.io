@@ -1,0 +1,24 @@
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-100463316-3', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<br>
+
+I am the kind of person who knows how to execute difficult tasks with precision.I always make sure that every task is just right, but is also completed in a timely manner.
+I am a creative thinker. I like to explore alternative solutions to problems and have an open mind about what will work best. My creativity has made me a little bit effective as a team leader because I can anticipate problems and innovate solutions.
+
+### Education
+
+ 
+
+- 2015-2019 Statistique et analyse de l’information à École Supérieure de la Statistique et de l’analyse de l’information,
+- 2014-2015 Cycle préparatoire aux études d’ingénieurs Math-Physique à l'université Libre de Tunis,
+- 2011-2014 Cycle préparatoire aux études d’ingénieurs Math-Physique à l'IPEIN Tunisie Université de carthage,
+- 2011 Lycée THIBAR .

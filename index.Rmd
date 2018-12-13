@@ -1,0 +1,14 @@
+---
+title: "Welcome in Kouki's site"
+output:
+  html_document:
+    includes:
+      in_header: cover.html
+
+---
+
+
+Kouki Mohamed, Data engineer !
+Born after 3 years in higher school of statistics and data analysis .
+
+[Get to know me ...](about.html)
